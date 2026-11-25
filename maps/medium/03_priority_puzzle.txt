@@ -1,0 +1,43 @@
+# Medium Level 3: Priority zones create optimal path challenges
+nb_drones: 5
+
+start_hub: start 0 0 [color=green]
+hub: slow_path1 1 -1 [zone=restricted color=red]
+hub: slow_path2 2 -1 [color=red]
+hub: fast_junction 1 0 [zone=priority color=blue max_drones=2]
+hub: fast_path 2 0 [zone=priority color=blue]
+hub: merge_point 3 0 [color=yellow max_drones=3]
+end_hub: goal 4 0 [color=green]
+
+connection: start-slow_path1
+connection: start-fast_junction
+connection: slow_path1-slow_path2
+connection: slow_path2-merge_point
+connection: fast_junction-fast_path
+connection: fast_path-merge_point
+connection: merge_point-goal [max_link_capacity=2]
+
+
+Figures:
+
+
+
+
+
+
+
+Chapter VIII
+Readme Requirements:
+
+• Description
+• Instructions
+• Resources
+• Des sections supplémentaires peuvent être nécessaires en fonction du projet (par exemple, exemples d'utilisation, liste des fonctionnalités, choix techniques, etc.).
+
+Les éléments supplémentaires requis seront explicitement indiqués ci-dessous.
+
+• Une description détaillée de vos choix d'algorithmes et de votre stratégie d'implémentation doit également être fournie.
+
+• Documentation des fonctionnalités de représentation visuelle et de leur impact sur l'expérience utilisateur.
+
+• Exemple d'entrée et de sortie attendue illustrant les fonctionnalités du programme.
